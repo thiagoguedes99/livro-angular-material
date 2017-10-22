@@ -1,0 +1,73 @@
+<!-- <mat-menu #appMenu="matMenu">
+    <button mat-menu-item> Settings </button>
+    <button mat-menu-item> Help </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+     <mat-icon>more_vert</mat-icon>
+  </button> -->
+
+  <br>
+  <br>
+  <br>
+
+  <!-- <button mat-icon-button (mouseenter)="openMenu()" [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+   </button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon> dialpad </mat-icon>
+        <span> Redial </span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon> voicemail </mat-icon>
+        <span> Check voicemail </span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon> notifications_off </mat-icon>
+        <span> Disable alerts </span>
+      </button>
+  </mat-menu> -->
+
+  <!-- <br>
+  <br>
+  <br>
+   -->
+<!-- <span>customizando a posição</span> -->
+
+ <!-- yPosition="below" -->
+  <!-- <mat-menu #appMenu="matMenu" yPosition="below">
+      <button mat-menu-item> Settings </button>
+      <button mat-menu-item> Help </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button> -->
+
+  <br>
+  <br>
+  <br>
+<!-- xPosition="after" yPosition="below"  yPosition="above"-->
+  <!-- <mat-menu  #MatMenu class="mat-elevation-z2" #appMenu="matMenu" [overlapTrigger]=false [classList]=classes direction=ltr> yPosition="below" -->
+  <!-- <mat-menu class="mat-elevation-z2" #appMenu="matMenu"> yPosition="below" -->
+  <mat-menu #appMenu="matMenu" [overlapTrigger]=false> <!-- yPosition="below" -->
+    <button mat-menu-item> Settingss </button>
+    <button mat-menu-item> Help </button>
+  </mat-menu>
+
+<mat-toolbar>
+<div class="centro">
+  <!-- <button mat-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon> -->
+    <!-- Home
+  </button> -->
+
+  <button mat-icon-button (mouseover)="openMenu()"  [matMenuTriggerFor]="appMenu">
+  <!-- <button mat-icon-button [matMenuTriggerFor]="appMenu"> -->
+    <!-- <mat-icon>more_vert</mat-icon> -->
+    detalhes
+  </button>
+</div>
+</mat-toolbar>
+
