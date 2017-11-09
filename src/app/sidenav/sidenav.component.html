@@ -70,19 +70,96 @@
 
 <!-- opened = começa com ele aberto -->
 <!-- disableClose="true" = trava com ele aberto-->
-<mat-sidenav-container class="example-container" fullscreen>
-  <mat-sidenav #sidenav class="example-sidenav"><!-- eventos acima são aqui!!  -->
-    Jolly good!
-    <br>
-    <button>ccccccccc</button>
+<!-- <mat-sidenav-container class="example-container" fullscreen> -->
+  <!-- <mat-sidenav #sidenav class="example-sidenav">eventos acima são aqui!!  -->
+    <!-- Jolly good! -->
+    <!-- <br> -->
+    <!-- <button>ccccccccc</button> -->
+  <!-- </mat-sidenav> -->
+
+  <!-- <div class="example-sidenav-content"> -->
+    <!-- <button type="button" mat-button (click)="sidenav.open()"> -->
+      <!-- Open sidenav -->
+    <!-- </button> -->
+  <!-- </div> -->
+
+<!-- </mat-sidenav-container> -->
+<!--
+<button>llll</button>
+<button (click)="sidenav.open()">meu botão</button> -->
+
+
+<!-- contaudo.......................................................................................................... -->
+
+<!-- <mat-sidenav-container fullscreen (ContextoClique)="clique()">
+
+  <mat-sidenav #sidenav #mynav [mode]=modo fixedTopGap=100 fixedBottomGap=100 fixedInViewport=true position="start" opened="true" (positionChanged)="mudouPosicao()">
+    oi <br>
+    ggg <br>
+    ggg <br>
+    ggg <br>
+    gg <br>
+    mat-button-toggle-groupg fffff fffff <br>
+    mat-button-toggle-groupg <br>
+    g <br>
+    g <br>
   </mat-sidenav>
 
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="sidenav.open()">
-      Open sidenav
-    </button>
-  </div>
+  <button (click)="abreTudo()">llll</button> <br>
+  <button (click)="sidenav.open()">meu botão</button> <br>
+  <button (click)="modo = 'over'">aqui</button> <br>
+  <button (click)="modo = 'side'">side</button> <br>
+  <app-menu></app-menu>
 
 </mat-sidenav-container>
+<button (click)="sidenav.close()">aquisss</button> -->
 
-<!-- <mat-drawer-content></mat-drawer-content> -->
+<!-- contaudo.......................................................................................................... -->
+
+
+
+<!--
+  mat-sidenav:
+    mode
+      "over" - faz o padrão;
+      "push" - empura e coloca a sombra;
+      "side" - empurra sem a sombra, (não volta sozinho)
+
+    align @deprecated
+      "start" - coloca o side na esquerda (padrão)
+      "end" - coloca o side na direita
+
+    position
+      "start" - coloca o side na esquerda (padrão)
+      "end" - coloca o side na direita
+
+    opened
+      "true" - começa com o side aberto
+      "false" - começa com o side fechado
+
+    disableClose
+      "true" - trava o fechamento automático
+      "false" - deixa fechar cliando fora
+
+    close() - evento de abrir
+    open() - evento de fechar
+
+    this.sides.fixedTopGap = 100;
+    this.sides.fixedBottomGap = 100;
+    this.sides.fixedInViewport = true;
+
+ -->
+
+
+ <mat-sidenav-container fullscreen>
+   <mat-sidenav #sidenav>
+     <button (click)="fechar()">Fechar menu</button>
+   </mat-sidenav>
+
+   <button (click)="abrir()">dentro do container</button>
+   <p>Primeiro parágrafo</p>
+   <p>Segundo parágrafo</p>
+
+  </mat-sidenav-container>
+
+  <button>fora do container</button>

@@ -1,0 +1,25 @@
+.mat-sidenav-bar {
+  height: 100%;
+}
+
+fullscreen {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  z-index: 3;
+}
+
+mat-sidenav {
+  width: 200px;
+  height: 100%;
+}
+
+.tudo {
+  height: 500px;
+}
+
+.vai {
+  margin-bottom: 100px;
+}
