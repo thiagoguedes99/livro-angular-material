@@ -1,32 +1,3 @@
-.centro {
-  padding: 200px;
-}
-
 .space {
   margin: 200px;
-}
-
-.meus {
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  background-color: darkgray;
-  transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: initial;
-  transition-delay: initial;
-}
-
-.meus:hover {
-  /* transform: scale(1.2) rotate(-5deg); */
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  box-shadow: 0 0 5px #1976d2;
-  /* transform: scale(1.2); */
-  /* transition: all .3s;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: initial;
-  transition-delay: initial; */
-}
-
-.vermelho {
-  background-color: red;
 }

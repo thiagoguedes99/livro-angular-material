@@ -1,165 +1,216 @@
-<!-- <p>
-  sidenav works!
-</p>
-<button mat-raised-button (click)="isLaunched = true" *ngIf="!isLaunched" color="primary">
-  Launch Fullscreen Sidenav Demo
-</button>
-
-<div class="demo-sidenav-area" *ngIf="isLaunched">
-  <mat-toolbar *ngIf="showHeader && !coverHeader">Header</mat-toolbar>
-  <mat-sidenav-container>
-    <mat-sidenav #start (open)="myinput.focus()" [mode]="mode"
-                 [fixedInViewport]="fixed" [fixedTopGap]="fixedTop" [fixedBottomGap]="fixedBottom">
-      Start Side Sidenav
-      <br>
-      <button mat-button (click)="start.close('mouse')">Close</button>
-      <br>
-      <button mat-button (click)="end.open('keyboard')">Open End Side</button>
-      <br>
-      <button mat-button (click)="modeIndex = (modeIndex + 1) % 3">Toggle Mode</button>
-      <div>Mode: {{start.mode}}</div>
-      <br>
-      <input #myinput>
-      <div class="demo-filler-content" *ngFor="let c of fillerContent">Filler Content</div>
-    </mat-sidenav>
-
-    <mat-sidenav #end position="end"
-                 [fixedInViewport]="fixed" [fixedTopGap]="fixedTop" [fixedBottomGap]="fixedBottom">
-      End Side Sidenav
-      <br>
-      <button mat-button (click)="end.close('mouse')">Close</button>
-      <div class="demo-filler-content" *ngFor="let c of fillerContent">Filler Content</div>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-      <mat-toolbar *ngIf="showHeader && coverHeader">Header</mat-toolbar>
-      <div class="demo-sidenav-content">
-        <div>
-          <button mat-raised-button (click)="isLaunched = false">
-            Exit Fullscreen Sidenav Demo
-          </button>
-        </div>
-
-        <div>
-          <h3>Sidenav</h3>
-          <button mat-button (click)="start.toggle(undefined, 'mouse')">Toggle Start Side Sidenav</button>
-          <button mat-button (click)="end.toggle(undefined, 'mouse')">Toggle End Side Sidenav</button>
-          <mat-checkbox [(ngModel)]="fixed">Fixed mode</mat-checkbox>
-          <mat-checkbox [(ngModel)]="coverHeader">Sidenav covers header/footer</mat-checkbox>
-        </div>
-
-        <div>
-          <h3>Header / Footer</h3>
-          <mat-checkbox [(ngModel)]="showHeader">Show header</mat-checkbox>
-          <mat-checkbox [(ngModel)]="showFooter">Show footer</mat-checkbox>
-        </div>
-
-        <div class="demo-filler-content" *ngFor="let c of fillerContent">Filler Content</div>
-      </div>
-      <mat-toolbar *ngIf="showFooter && coverHeader">Footer</mat-toolbar>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  <mat-toolbar *ngIf="showFooter && !coverHeader">Footer</mat-toolbar>
-</div> -->
-
-
-
-
-
-
-
-<!-- opened = começa com ele aberto -->
-<!-- disableClose="true" = trava com ele aberto-->
-<!-- <mat-sidenav-container class="example-container" fullscreen> -->
-  <!-- <mat-sidenav #sidenav class="example-sidenav">eventos acima são aqui!!  -->
-    <!-- Jolly good! -->
-    <!-- <br> -->
-    <!-- <button>ccccccccc</button> -->
-  <!-- </mat-sidenav> -->
-
-  <!-- <div class="example-sidenav-content"> -->
-    <!-- <button type="button" mat-button (click)="sidenav.open()"> -->
-      <!-- Open sidenav -->
-    <!-- </button> -->
-  <!-- </div> -->
-
-<!-- </mat-sidenav-container> -->
-<!--
-<button>llll</button>
-<button (click)="sidenav.open()">meu botão</button> -->
-
-
-<!-- contaudo.......................................................................................................... -->
-
-<!-- <mat-sidenav-container fullscreen (ContextoClique)="clique()">
-
-  <mat-sidenav #sidenav #mynav [mode]=modo fixedTopGap=100 fixedBottomGap=100 fixedInViewport=true position="start" opened="true" (positionChanged)="mudouPosicao()">
-    oi <br>
-    ggg <br>
-    ggg <br>
-    ggg <br>
-    gg <br>
-    mat-button-toggle-groupg fffff fffff <br>
-    mat-button-toggle-groupg <br>
-    g <br>
-    g <br>
+<!-- menu simples -->
+<!-- <mat-sidenav-container class="tudo">
+  <mat-sidenav #sidenav>
   </mat-sidenav>
 
-  <button (click)="abreTudo()">llll</button> <br>
-  <button (click)="sidenav.open()">meu botão</button> <br>
-  <button (click)="modo = 'over'">aqui</button> <br>
-  <button (click)="modo = 'side'">side</button> <br>
-  <app-menu></app-menu>
+  <button (click)="sidenav.open()">dentro do container</button>
+  
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu sem fullscreen -->
+<!-- <mat-sidenav-container>
+  <mat-sidenav #sidenav>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
 
 </mat-sidenav-container>
-<button (click)="sidenav.close()">aquisss</button> -->
 
-<!-- contaudo.......................................................................................................... -->
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
 
-
-
-<!--
-  mat-sidenav:
-    mode
-      "over" - faz o padrão;
-      "push" - empura e coloca a sombra;
-      "side" - empurra sem a sombra, (não volta sozinho)
-
-    align @deprecated
-      "start" - coloca o side na esquerda (padrão)
-      "end" - coloca o side na direita
-
-    position
-      "start" - coloca o side na esquerda (padrão)
-      "end" - coloca o side na direita
-
-    opened
-      "true" - começa com o side aberto
-      "false" - começa com o side fechado
-
-    disableClose
-      "true" - trava o fechamento automático
-      "false" - deixa fechar cliando fora
-
-    close() - evento de abrir
-    open() - evento de fechar
-
-    this.sides.fixedTopGap = 100;
-    this.sides.fixedBottomGap = 100;
-    this.sides.fixedInViewport = true;
-
- -->
-
-
- <mat-sidenav-container fullscreen>
-   <mat-sidenav #sidenav>
-     <button (click)="fechar()">Fechar menu</button>
-   </mat-sidenav>
-
-   <button (click)="abrir()">dentro do container</button>
-   <p>Primeiro parágrafo</p>
-   <p>Segundo parágrafo</p>
-
+<!-- menu com fullscreen -->
+<!-- <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav>
+    </mat-sidenav>
+  
+    <button (click)="sidenav.open()">dentro do container</button>
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+  
   </mat-sidenav-container>
+  
+  <button (click)="sidenav.open()">fora do container</button> -->
+  <!-- .................................................................. -->
 
-  <button>fora do container</button>
+<!-- menu com botão de fechar -->
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+  
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+  
+</mat-sidenav-container>
+  
+<button (click)="sidenav.open()">fora do container</button> -->
+  <!-- .................................................................. -->
+
+<!-- menu com mode='push' -->
+  <!-- <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode='push'>
+        <button (click)="sidenav.close()">Fechar menu</button>
+    </mat-sidenav>
+
+    <button (click)="sidenav.open()">dentro do container</button>
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+  <!-- .................................................................. -->
+
+  <!-- menu com mode='side' -->
+  <!-- <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode='side'>
+        <button (click)="sidenav.close()">Fechar menu</button>
+    </mat-sidenav>
+
+    <button (click)="sidenav.open()">dentro do container</button>
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+  <!-- .................................................................. -->
+
+  <!-- menu com position='start' -->  
+  <!-- <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav position='start'>
+        <button (click)="sidenav.close()">Fechar menu</button>
+    </mat-sidenav>
+
+    <button (click)="sidenav.open()">dentro do container</button>
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+  <!-- .................................................................. -->
+
+<!-- menu com position='end' -->  
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav position='end'>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com opened='false'   -->
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav opened='false'>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com opened='true' -->  
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav opened='true'>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com disableClose='false' -->  
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav disableClose='false'>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com disableClose='true' -->  
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav disableClose='true'>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com `fixedInViewport`, `fixedBottomGap` e `fixedTopGap`. -->  
+<!-- <mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav [fixedInViewport]=true [fixedTopGap]=100 [fixedBottomGap]=100>
+      <button (click)="sidenav.close()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="sidenav.open()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button (click)="sidenav.open()">fora do container</button> -->
+<!-- .................................................................. -->
+
+<!-- menu com estrutura simples -->  
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+      <button (click)="fechar()">Fechar menu</button>
+  </mat-sidenav>
+
+  <button (click)="abrir()">dentro do container</button>
+  <p>Primeiro parágrafo</p>
+  <p>Segundo parágrafo</p>
+
+</mat-sidenav-container>
+
+<button>fora do container</button>
+<!-- .................................................................. -->
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,14 +11,15 @@ export class MenuComponent implements OnInit {
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @ViewChild(MatMenu) mat: MatMenu;
 
-  constructor() {
-
-  }
+  constructor() { }
 
    ngOnInit() {
     this.mat.xPosition = 'before';
-    this.mat.yPosition = "below";
-    this.mat.overlapTrigger = true;
+    this.mat.yPosition = "above";
+    this.mat.overlapTrigger = false;
+
+    this.mat.close.subscribe(() => this.fechouMenu());
+    
   }
 
   abriu() {
@@ -29,9 +30,14 @@ export class MenuComponent implements OnInit {
     console.log('fechou()');
   }
 
+  fechouMenu() {
+    console.log('fechouMenu()');
+  }
+
   abrirViaProgramacao() {
     console.log(this.trigger.menuOpen);
     this.trigger.openMenu();
+    console.log(this.trigger.menuOpen);    
   }
 
 }

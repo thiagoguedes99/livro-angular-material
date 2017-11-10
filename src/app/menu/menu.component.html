@@ -1,16 +1,132 @@
+<!-- ** menu simplpes com botões ** -->
+<!-- <mat-menu #meuMenu="matMenu">
+    <button>Home</button>
+    <button>Fale Conosco</button>
+</mat-menu>
+    
+<button [matMenuTriggerFor]="meuMenu">Abrir menu</button> -->
+<!-- ....................................................................... -->
 
+<!-- ** menu simples com botões estilizados ** -->
+<!-- <mat-menu #meuMenu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
 
+<button [matMenuTriggerFor]="meuMenu">Abrir menu</button> -->
+<!-- ....................................................................... -->
 
+<!-- ** menu com espaçamento das laterais ** -->
+<!-- <mat-menu #meuMenu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+    
+<div class="space">
+  <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
 
-<mat-menu #meuMenu="matMenu">
+<!-- ** menu com valores padrão ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="after" yPosition="below" [overlapTrigger]="true">
   <button mat-menu-item>Home</button>
   <button mat-menu-item>Fale Conosco</button>
-  </mat-menu>
-
-  <div class="space">
+</mat-menu>
+    
+<div class="space">
   <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
-  </div>
+</div> -->
+<!-- ....................................................................... -->
 
-  <div class="space">
+<!-- ** menu abrindo abaixo do botão ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="after" yPosition="below" [overlapTrigger]="false">
+  <button mat-menu-item>Home</button>
+  <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+    
+<div class="space">
+  <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- ** menu alinhado na direta ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="below" [overlapTrigger]="false">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- ** menu abrindo abaixo do botão ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- ** menu abrindo com elevação ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false" class="mat-elevation-z20">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- ** menu com evento ** -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false" class="mat-elevation-z20">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu" (onMenuOpen)="abriu()" (onMenuClose)="fechou()">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- menu com evento no menu -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="above"
+[overlapTrigger]="false" (close)="fechouMenu()" class="mat-elevation-z20">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu" (onMenuOpen)="abriu()" (onMenuClose)="fechou()">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- menu simples -->
+<!-- <mat-menu #meuMenu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- menu com outro botão para evento -->
+<mat-menu #meuMenu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
+</div>
+
+<div class="space">
     <button (click)="abrirViaProgramacao()">Abrir menu via programação</button>
-  </div>
+</div>
+<!-- ....................................................................... -->
