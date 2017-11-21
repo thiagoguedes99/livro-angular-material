@@ -1,0 +1,19 @@
+<!-- <mat-form-field [floatPlaceholder]="oi"> -->
+<mat-form-field hideRequiredMarker="false" color="accent" floatPlaceholder="always" hintLabel="Max 10 characters">
+<!-- <mat-form-field> -->
+  <!-- <input matInput type="text"> -->
+  <!-- <span matPrefix>$&nbsp;</span> -->
+  <span matPrefix>R$&nbsp;</span>
+  <input matInput placeholder="Si" [formControl]="email" required>
+  <span matSuffix>.00</span>
+  <!-- <mat-placeholder>neste campo </mat-placeholder> -->
+  <mat-hint align="end">/10</mat-hint>
+  <mat-error *ngIf="email.invalid">kkkkkkkkk</mat-error>
+
+</mat-form-field>
+
+<!-- <mat-form-field
+[hideRequiredMarker]="options.value.hideRequired"
+[floatPlaceholder]="options.value.floatPlaceholder">
+<input matInput placeholder="Simple placeholder" required>
+</mat-form-field> -->
