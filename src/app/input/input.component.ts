@@ -9,9 +9,11 @@ import { Validators, FormControl } from '@angular/forms';
 })
 export class InputComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email: FormControl = new FormControl('', [Validators.required, Validators.email]);
+  // email = new FormControl('thiago');
   valor: FloatPlaceholderType = 'always';
   mostar: boolean = false;
+  meuValor: string;
 
   constructor() { }
 

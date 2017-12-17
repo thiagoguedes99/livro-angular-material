@@ -12,6 +12,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { InputComponent } from './input/input.component';
+import { FormFieldComponent } from './form-field/form-field.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InputComponent } from './input/input.component';
     ToolbarComponent,
     MenuComponent,
     SidenavComponent,
-    InputComponent
+    InputComponent,
+    FormFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +31,8 @@ import { InputComponent } from './input/input.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
