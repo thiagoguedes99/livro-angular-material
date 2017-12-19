@@ -3,7 +3,7 @@
     <button>Home</button>
     <button>Fale Conosco</button>
 </mat-menu>
-    
+
 <button [matMenuTriggerFor]="meuMenu">Abrir menu</button> -->
 <!-- ....................................................................... -->
 
@@ -21,7 +21,7 @@
     <button mat-menu-item>Home</button>
     <button mat-menu-item>Fale Conosco</button>
 </mat-menu>
-    
+
 <div class="space">
   <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
 </div> -->
@@ -32,7 +32,7 @@
   <button mat-menu-item>Home</button>
   <button mat-menu-item>Fale Conosco</button>
 </mat-menu>
-    
+
 <div class="space">
   <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
 </div> -->
@@ -43,7 +43,7 @@
   <button mat-menu-item>Home</button>
   <button mat-menu-item>Fale Conosco</button>
 </mat-menu>
-    
+
 <div class="space">
   <button [matMenuTriggerFor]="meuMenu">Abrir menu</button>
 </div> -->
@@ -98,6 +98,23 @@
 [overlapTrigger]="false" (close)="fechouMenu()" class="mat-elevation-z20">
     <button mat-menu-item>Home</button>
     <button mat-menu-item>Fale Conosco</button>
+</mat-menu>
+
+<div class="space">
+    <button [matMenuTriggerFor]="meuMenu" (onMenuOpen)="abriu()" (onMenuClose)="fechou()">Abrir menu</button>
+</div> -->
+<!-- ....................................................................... -->
+
+<!-- menu com sub menus -->
+<!-- <mat-menu #meuMenu="matMenu" xPosition="before" yPosition="above"
+[overlapTrigger]="false" (close)="fechouMenu()" class="mat-elevation-z20">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item [matMenuTriggerFor]="faleConosco">Fale Conosco</button>
+</mat-menu>
+
+<mat-menu #faleConosco="matMenu">
+  <button mat-menu-item>Telefone</button>
+  <button mat-menu-item>Email</button>
 </mat-menu>
 
 <div class="space">
