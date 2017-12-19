@@ -30,6 +30,7 @@ import { FormFieldComponent } from './form-field/form-field.component';
     MatMenuModule,
     MatSidenavModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
     MatInputModule,
     ReactiveFormsModule,
     FormsModule

@@ -1,4 +1,33 @@
-<mat-form-field>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- .......................... -->
+<!-- elemento HTML simples -->
+<!-- <label for="nome">Digite seu nome</label>
+<input type="text" id="nome"> -->
+<!-- .......................... -->
+
+
+<!-- .......................... -->
+<!-- elemento com input -->
+<!-- <input type="text" id="nome" placeholder="Digite seu nome"> -->
+<!-- .......................... -->
+
+
+<!-- <mat-form-field>
+  <input matInput type="text" id="nome" placeholder="Digite seu nome">
+</mat-form-field> -->
+
+
+
+
+
+<!-- <mat-form-field>
   <input matInput placeholder="Input">
 </mat-form-field>
 
@@ -12,4 +41,15 @@
   <mat-form-field class="example-full-width">
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
-</form>
+</form> -->
+
+
+<mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput [formControl]="nome" type="text" id="nome" required>
+  <mat-error>necessita digitar algo</mat-error>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field>
