@@ -12,39 +12,159 @@
 <input type="text" id="nome"> -->
 <!-- .......................... -->
 
-
 <!-- .......................... -->
 <!-- elemento com input -->
 <!-- <input type="text" id="nome" placeholder="Digite seu nome"> -->
 <!-- .......................... -->
 
-
+<!-- .......................... -->
+<!-- form-field simples -->
 <!-- <mat-form-field>
   <input matInput type="text" id="nome" placeholder="Digite seu nome">
 </mat-form-field> -->
+<!-- .......................... -->
 
-
-
-
-
+<!-- .......................... -->
+<!-- mat-placeholder -->
 <!-- <mat-form-field>
-  <input matInput placeholder="Input">
-</mat-form-field>
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+</mat-form-field> -->
+<!-- .......................... -->
 
+<!-- .......................... -->
+<!-- usando floatPlaceholder="always" -->
+<!-- <mat-form-field floatPlaceholder="always">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+</mat-form-field> -->
+<!-- .......................... -->
 
+<!-- .......................... -->
+<!-- usando floatPlaceholder="never" -->
+<!-- <mat-form-field floatPlaceholder="never">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+</mat-form-field> -->
+<!-- .......................... -->
 
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
+<!-- .......................... -->
+<!-- usando floatPlaceholder="auto" -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+</mat-form-field> -->
+<!-- .......................... -->
 
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form> -->
+<!-- .......................... -->
+<!-- usando o mat-hint -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint>primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
 
+<!-- .......................... -->
+<!-- mat-hint align="start" -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="start">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
 
-<mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
+<!-- .......................... -->
+<!-- mat-hint align="end" -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando hintLabel -->
+<!-- <mat-form-field floatPlaceholder="auto" hintLabel="primeiro nome">
+  <input matInput type="text" id="nome">
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando matPrefix -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome">
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando matSuffix -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome">
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando required -->
+<!-- <mat-form-field floatPlaceholder="auto">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando hideRequiredMarker="false" -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="false">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando hideRequiredMarker="true" -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando formControl -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput [formControl]="nome" type="text" id="nome" required>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando mat-error -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
   <span matPrefix>SR(a)&nbsp;</span>
   <input matInput [formControl]="nome" type="text" id="nome" required>
   <mat-error>necessita digitar algo</mat-error>
@@ -52,4 +172,44 @@
 
   <mat-placeholder>Digite seu nome</mat-placeholder>
   <mat-hint align="end">primeiro nome</mat-hint>
-</mat-form-field>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando color="primary" -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true" color="primary">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <mat-error>necessita digitar algo</mat-error>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando color="accent" -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true" color="accent">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <mat-error>necessita digitar algo</mat-error>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->
+
+<!-- .......................... -->
+<!-- usando color="warn" -->
+<!-- <mat-form-field floatPlaceholder="auto" hideRequiredMarker="true" color="warn">
+  <span matPrefix>SR(a)&nbsp;</span>
+  <input matInput type="text" id="nome" required>
+  <mat-error>necessita digitar algo</mat-error>
+  <span matSuffix>.</span>
+
+  <mat-placeholder>Digite seu nome</mat-placeholder>
+  <mat-hint align="end">primeiro nome</mat-hint>
+</mat-form-field> -->
+<!-- .......................... -->

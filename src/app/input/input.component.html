@@ -1,69 +1,35 @@
-<!-- <mat-form-field> -->
-  <!-- <mat-form-field hideRequiredMarker="false" color="accent" floatPlaceholder="always" hintLabel="Max 10 characters"> -->
-  <!-- <mat-form-field> -->
-    <!-- <input matInput type="text"> -->
-    <!-- <span matPrefix>$&nbsp;</span> -->
-    <!-- <span matPrefix>R$&nbsp;</span> -->
-    <!-- <input matInput placeholder="Si" [formControl]="email" [errorStateMatcher]="true">  -->
-    <!-- required -->
-    <!-- <span matSuffix>.00</span> -->
-    <!-- <mat-placeholder>neste campo </mat-placeholder> -->
-    <!-- <mat-hint align="end">/10</mat-hint> -->
-    <!-- <mat-error *ngIf="email.invalid">kkkkkkkkk</mat-error> -->
-    <!-- <mat-error>kkkkkkkkk</mat-error> -->
-    <!-- *ngIf="email.invalid" -->
-
-  <!-- </mat-form-field> -->
-
-  <!-- <mat-form-field class="example-full-width"> -->
-    <!-- <input matInput placeholder="Company (disabled)" disabled value="Google"> -->
-    <!-- <input matInput placeholder="Company (disabled)" readonly value="Google"> -->
-  <!-- </mat-form-field> -->
-
-  <!-- <input type="text" disabled> -->
-
-  <!-- <label for="nome">Digite seu nome</label> -->
-  <!-- [floatPlaceholder]="valor" -->
-  <!-- [disabled]="true" -->
-<mat-form-field floatPlaceholder="auto" hideRequiredMarker="true" color="accent">
-  <span matPrefix>SR(a)&nbsp;</span>
-  <input matInput type="text" id="nome">
-  <mat-error>deu erro aqui</mat-error>
-  <span matSuffix>.</span>
-
-  <mat-placeholder>Digite seu nome</mat-placeholder>
-  <mat-hint align="end">primeiro nome</mat-hint>
-</mat-form-field>
-
-<mat-form-field>
-  <input matInput placeholder="Input" focused="true">
-</mat-form-field>
-
-<mat-form-field>
-  <!-- <textarea matInput placeholder="Input" focused="true"> -->
-    <textarea matInput name="" id="" cols="30" rows="10" matTextareaAutosize matAutosizeMinRows="10" matAutosizeMaxRows="15"></textarea>
-</mat-form-field>
-
-<input matInput type="text" placeholder="Company (disabled)">
-<!-- <mat-form-field
-[hideRequiredMarker]="options.value.hideRequired"
-[floatPlaceholder]="options.value.floatPlaceholder">
-<input matInput placeholder="Simple placeholder" required>
+<!-- .......................... -->
+<!-- usando disabled -->
+<!-- <mat-form-field>
+  <mat-placeholder>elemento desabilitado</mat-placeholder>
+  <input matInput type="text" disabled>
 </mat-form-field> -->
+<!-- .......................... -->
 
-<select name="" id="" placeholder="Digite seu nome">
-  <option value="">1</option>
-  <option value="">1</option>
-  <option value="">1</option>
-</select>
+<!-- .......................... -->
+<!-- usando textarea -->
+<!-- <mat-form-field>
+  <textarea matInput></textarea>
+</mat-form-field> -->
+<!-- .......................... -->
 
-<br>
+<!-- .......................... -->
+<!-- usando matTextareaAutosize -->
+<!-- <mat-form-field>
+  <textarea matInput matTextareaAutosize></textarea>
+</mat-form-field> -->
+<!-- .......................... -->
 
-<mat-form-field floatPlaceholder="auto" hideRequiredMarker="true">
-  <span matPrefix>SR(a)&nbsp;</span>
-  <input matInput type="text" id="nome" required>
-  <span matSuffix>.</span>
+<!-- .......................... -->
+<!-- usando matAutosizeMinRows -->
+<!-- <mat-form-field>
+  <textarea matInput matTextareaAutosize matAutosizeMinRows="5"></textarea>
+</mat-form-field> -->
+<!-- .......................... -->
 
-  <mat-placeholder>Digite seu nome</mat-placeholder>
-  <mat-hint align="end">primeiro nome</mat-hint>
-</mat-form-field>
+<!-- .......................... -->
+<!-- usando matAutosizeMaxRows -->
+<!-- <mat-form-field>
+  <textarea matInput matTextareaAutosize matAutosizeMinRows="5" matAutosizeMaxRows="8"></textarea>
+</mat-form-field> -->
+<!-- .......................... -->
