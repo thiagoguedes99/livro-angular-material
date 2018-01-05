@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatMenuModule, MatSidenavModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatMenuModule,
+         MatSidenavModule, MatFormFieldModule,
+         MatInputModule, MatSelectModule,
+         MatCardModule, MatIconModule } from '@angular/material';
 
 import 'hammerjs';
 
@@ -12,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { InputComponent } from './input/input.component';
 import { FormFieldComponent } from './form-field/form-field.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { FormFieldComponent } from './form-field/form-field.component';
     MenuComponent,
     SidenavComponent,
     InputComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,10 @@ import { FormFieldComponent } from './form-field/form-field.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
