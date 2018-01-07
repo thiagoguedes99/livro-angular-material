@@ -157,4 +157,17 @@ export class SelectComponent implements OnInit {
     return o1 === o2;
   }
 
+  abrir() {
+    alert('o componente mat-select abriu!');
+  }
+
+  fechar() {
+    alert('o componente mat-select fechou!');
+  }
+
+  mudou(item) {
+    alert(`o item selecionado é: ${item}`);
+    console.log(item);
+  }
+
 }

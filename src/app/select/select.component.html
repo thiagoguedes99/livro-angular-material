@@ -13,20 +13,21 @@
 <!-- {{ selecionado }} -->
 
 <mat-form-field>
-    <mat-select multiple placeholder="qual deseja comprar?">
-      <mat-optgroup label="Veículos" [disabled]="true">
-        <mat-option value="carro">Carro</mat-option>
-        <mat-option value="ônibus">Ônibus</mat-option>
-        <mat-option value="caminhão">Caminhão</mat-option>
-      </mat-optgroup>
-      <mat-optgroup label="Eletrônicos">
-        <mat-option value="computador">Computador</mat-option>
-        <mat-option value="televisão" [disabled]="true">Televisão</mat-option>
-        <mat-option value="celular">Celular</mat-option>
-      </mat-optgroup>
-    </mat-select>
-  </mat-form-field>
-
+  <mat-select multiple #itens="matSelect" (onOpen)="abrir()" (onClose)="fechar()" (change)="mudou($event.value)" placeholder="qual deseja comprar?">
+    <mat-select-trigger>você escolheu {{itens.value}} </mat-select-trigger>
+    <mat-optgroup label="Veículos" [disabled]="true">
+      <mat-option value="carro">Carro</mat-option>
+      <mat-option value="ônibus">Ônibus</mat-option>
+      <mat-option value="caminhão">Caminhão</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Eletrônicos">
+      <mat-option value="computador">Computador</mat-option>
+      <mat-option value="televisão" [disabled]="true">Televisão</mat-option>
+      <mat-option value="celular">Celular</mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+{{itens.value}}
 <br>
 <br>
 <br>
