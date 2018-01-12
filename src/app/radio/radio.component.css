@@ -1,0 +1,25 @@
+.demo-button {
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+/* .demo-section {
+  margin: 8px;
+  padding: 16px;
+
+  .mat-radio-button {
+    margin: 8px;
+  } */
+/* } */
+
+.demo-section {
+  margin: 8px;
+  padding: 16px;
+}
+.demo-section .mat-radio-button {
+  margin: 8px;
+}
+
+.borda {
+  border: solid red 3px;
+}
