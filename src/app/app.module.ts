@@ -69,6 +69,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioComponent } from './radio/radio.component';
 import { SliderComponent } from './slider/slider.component';
 import { ToggleComponent } from './toggle/toggle.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { ToggleComponent } from './toggle/toggle.component';
     CheckboxComponent,
     RadioComponent,
     SliderComponent,
-    ToggleComponent
+    ToggleComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,

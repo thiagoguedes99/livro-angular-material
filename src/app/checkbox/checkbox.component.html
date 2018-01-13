@@ -1,4 +1,36 @@
-<mat-checkbox align="end" #myCheck checked="true" required>meu texto</mat-checkbox>
+<fieldset>
+  <legend>menus</legend>
+  <mat-checkbox indeterminate="true">Meu Texto</mat-checkbox>
+</fieldset>
+
+<mat-checkbox color="primary" #myCheck indeterminate="true" (indeterminateChange)="estadoIndeterminado($event)" (change)="estadoMudado($event)">
+  Meu Texto
+</mat-checkbox>
+<button (click)="myCheck.indeterminate = true">
+  Mudar valor
+</button>
+
+
+
+
+
+
+
+<!-- <mat-checkbox indeterminate="true" #myCheck
+(indeterminateChange)="determina($event)">Meu Texto</mat-checkbox>
+<button (click)="myCheck.indeterminate = true">mudar</button> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <mat-checkbox align="end" #myCheck checked="true" required>meu texto</mat-checkbox> -->
 <br>
 <button (click)="myCheck.indeterminate = true">indeterminate</button>
 <br>
@@ -82,3 +114,13 @@
     </ul>
   </li>
 </ul>
+
+<!-- meu teste -->
+<mat-checkbox (change)="allCheck($event.checked)" [(ngModel)]="todos">
+  <h3>tarefas</h3>
+</mat-checkbox>
+<li *ngFor="let item of tarefas">
+  <mat-checkbox [checked]="item.completed" (change)="verificaTodos($event.checked)" >
+    {{ item.name }}
+  </mat-checkbox>
+</li>

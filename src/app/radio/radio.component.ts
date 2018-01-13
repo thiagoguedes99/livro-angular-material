@@ -24,4 +24,8 @@ export class RadioComponent implements OnInit {
     'Autumn',
   ];
 
+  mudou(evento) {
+    console.log(evento);
+  }
+
 }
