@@ -28,4 +28,8 @@ export class RadioComponent implements OnInit {
     console.log(evento);
   }
 
+  mudouGrupo(evento) {
+    console.log(evento);
+  }
+
 }
