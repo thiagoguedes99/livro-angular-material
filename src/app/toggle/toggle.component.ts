@@ -43,4 +43,8 @@ export class ToggleComponent implements OnInit {
     alert(`You submitted the form.`);
   }
 
+  ligaDesliga(evento) {
+    console.log(evento)
+  }
+
 }
