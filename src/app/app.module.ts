@@ -70,6 +70,7 @@ import { RadioComponent } from './radio/radio.component';
 import { SliderComponent } from './slider/slider.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
     RadioComponent,
     SliderComponent,
     ToggleComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,

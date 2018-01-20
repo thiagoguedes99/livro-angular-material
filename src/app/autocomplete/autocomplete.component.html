@@ -1,3 +1,68 @@
+
+<input type="text">
+
+<mat-form-field>
+  <input type="text" matInput placeholder="países">
+</mat-form-field>
+
+<mat-form-field>
+    <input type="text" matInput>
+</mat-form-field>
+
+
+<mat-form-field>
+  <input type="text" matInput placeholder="escolha...." [matAutocomplete]="opt">
+  <mat-autocomplete #opt="matAutocomplete">
+    <mat-option value="x">xuxu</mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<input type="text">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- fazendo com [(ngModel)]="" -->
+<!-- <mat-form-field>
+  <input type="text" matInput placeholder="países" [(ngModel)]="conteudoDigitado" (ngModelChange)="filtrar($event)"  [matAutocomplete]="filtro">
+
+  <mat-autocomplete #filtro="matAutocomplete">
+    <mat-option *ngFor="let pais of paisesFiltrados" [value]="pais"> {{ pais }} </mat-option>
+  </mat-autocomplete>
+</mat-form-field> -->
+
+<br>
+
+<mat-form-field>
+    <input type="text" matInput placeholder="países" [formControl]="conteudoDigitado" [matAutocomplete]="filtro">
+
+  <mat-autocomplete #filtro="matAutocomplete">
+    <mat-option *ngFor="let pais of paisesFiltrados" [value]="pais.sigla"> {{ pais.nome }} </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<br>
+{{ conteudoDigitado.value | json}}
+{{ conteudoDigitado}}
+<!-- <br>
+{{paisesFiltrados}}
+<br>
+{{paises}} -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 Space above cards: <input type="number" [formControl]="topHeightCtrl">
 <div [style.height.px]="topHeightCtrl.value"></div>
 <div class="demo-autocomplete">

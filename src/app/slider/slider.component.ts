@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSliderChange } from '@angular/material';
 
 @Component({
   selector: 'app-slider',
@@ -17,5 +18,11 @@ export class SliderComponent implements OnInit {
   min: number = 0;
   max: number = 100;
   disabledValue = 0;
+
+  mudou(event: MatSliderChange) {
+    console.log(event.source.percent)
+    console.log(event.value)
+    // event.source.
+  }
 
 }

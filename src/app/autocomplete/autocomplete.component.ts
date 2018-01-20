@@ -113,8 +113,8 @@ export class AutocompleteComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
   displayFn(value: any): string {
     return value && typeof value === 'object' ? value.name : value;
@@ -138,5 +138,49 @@ export class AutocompleteComponent implements OnInit {
     const filterValue = val.toLowerCase();
     return states.filter(state => state.name.toLowerCase().startsWith(filterValue));
   }
+
+
+  // paises: string[] = ['Brasil', 'Argentina', 'Peru', 'Chile', 'Paraguai', 'Uruguai'];
+  paises: any[] = [
+    {
+      nome: 'Brasil',
+      sigla: 'BR'
+    },
+    {
+      nome:'Argentina',
+      sigla: 'AR'
+    },
+    {
+      nome:'Peru',
+      sigla: 'PE'
+    },
+    {
+      nome: 'Chile',
+      sigla: 'CL'
+    },
+    {
+      nome:'Paraguai',
+      sigla: 'PY'
+    },
+    {
+      nome: 'Uruguai',
+      sigla: 'UY'
+    }
+  ];
+  paisesFiltrados: string[];
+  // conteudoDigitado: string;
+  conteudoDigitado: FormControl = new FormControl();
+
+  ngOnInit() {
+    this.conteudoDigitado.valueChanges.subscribe(val => {
+      this.paisesFiltrados = this.paises.filter(nome => nome.nome.toLowerCase().includes(val));
+    })
+  }
+
+  // filtrar(valor) {
+  //   console.log(valor)
+  //   // this.paisesFiltrados = this.paises.filter(nome => nome.toLowerCase().startsWith(valor));
+  //   this.paisesFiltrados = this.paises.filter(nome => nome.toLowerCase().includes(valor));
+  // }
 
 }

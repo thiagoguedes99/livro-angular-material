@@ -1,3 +1,21 @@
+
+
+<!-- <mat-slider #mySlider min="20" max="80" step="4" tickInterval="auto"></mat-slider> -->
+<mat-slider #mySlider min="20" max="80" step="4" tickInterval="5" thumbLabel="true" invert vertical (change)="mudou($event)"></mat-slider>
+{{ mySlider.value }}
+{{ mySlider.percent }}
+{{ mySlider.displayValue }}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <input type="range">
 <mat-slider step="4" tickInterval="3"></mat-slider>
 <mat-slider step="4" tickInterval="auto"></mat-slider>
@@ -9,7 +27,7 @@ Label <mat-slider #slidey aria-label="Basic slider"></mat-slider>
 {{slidey.value}}
 
 <h1>Colors</h1>
-<mat-slider color="primary" value="50" thumbLabel aria-label="Primary color slider"></mat-slider>
+<mat-slider color="primary" value="50" thumbLabel="true" aria-label="Primary color slider"></mat-slider>
 <mat-slider color="accent" value="50" thumbLabel aria-label="Accent color slider"></mat-slider>
 <mat-slider color="warn" value="50" thumbLabel aria-label="Warn color slider"></mat-slider>
 
