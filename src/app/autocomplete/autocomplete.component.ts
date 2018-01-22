@@ -183,4 +183,12 @@ export class AutocompleteComponent implements OnInit {
   //   this.paisesFiltrados = this.paises.filter(nome => nome.toLowerCase().includes(valor));
   // }
 
+  exibe(obj): string | null {
+    return obj ? obj.nome : null;
+  }
+
+  selecionou(event) {
+    console.log(event);
+  }
+
 }
