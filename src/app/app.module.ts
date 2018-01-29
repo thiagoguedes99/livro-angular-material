@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {FormControl} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import { MatToolbarModule, MatMenuModule,
 //          MatSidenavModule, MatFormFieldModule,
@@ -45,7 +46,7 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
-import {MatNativeDateModule, MatRippleModule} from '@angular/material';
+import {MatNativeDateModule, MatRippleModule, MAT_DATE_LOCALE, MAT_DATE_FORMATS} from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {A11yModule} from '@angular/cdk/a11y';
@@ -151,7 +152,10 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     PlatformModule,
     PortalModule,
   ],
-  providers: [],
+  providers: [
+    // {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
+    // {provide: MAT_DATE_FORMATS, useValue: 'DD-MM-YYYY'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

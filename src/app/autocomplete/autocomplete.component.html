@@ -18,6 +18,22 @@
 </mat-form-field>
 
 <input type="text"> -->
+<br>
+<br>
+
+<!-- retirar isso -->
+{{ filtro.isOpen }}
+
+<mat-form-field>
+    <input type="text" matInput placeholder="países" [formControl]="conteudoDigitado" [matAutocomplete]="filtro">
+
+  <mat-autocomplete #filtro="matAutocomplete" [displayWith]="exibe" (optionSelected)="selecionou($event)">
+    <mat-option *ngFor="let pais of paisesFiltrados" [value]="pais"> {{ pais.nome }} </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+{{ conteudoDigitado.value | json}}
+<!-- retirar isso -->
 
 <br>
 <br>
@@ -41,7 +57,7 @@
 
 <br>
 <!-- {{ filtro.showPanel }} -->
-{{ filtro.isOpen }}
+<!-- {{ filtro.isOpen }}
 
 <mat-form-field>
     <input type="text" matInput placeholder="países" [formControl]="conteudoDigitado" [matAutocomplete]="filtro">
@@ -49,10 +65,10 @@
   <mat-autocomplete #filtro="matAutocomplete" [displayWith]="exibe" (optionSelected)="selecionou($event)">
     <mat-option *ngFor="let pais of paisesFiltrados" [value]="pais"> {{ pais.nome }} </mat-option>
   </mat-autocomplete>
-</mat-form-field>
+</mat-form-field> -->
 
 <!-- <br> -->
-{{ conteudoDigitado.value | json}}
+<!-- {{ conteudoDigitado.value | json}} -->
 <!-- {{ conteudoDigitado}} -->
 <!-- <br>
 {{paisesFiltrados}}

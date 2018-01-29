@@ -18,6 +18,56 @@
 
 <!-- <app-slider></app-slider> -->
 
-<app-autocomplete></app-autocomplete>
+<!-- <app-autocomplete></app-autocomplete> -->
 
 <!-- <app-datepicker></app-datepicker> -->
+
+<!-- <button (click)="myDatepicker.open()">abrir</button>
+<mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+<mat-form-field>
+  <input matInput
+        [min]="minhaData"
+        [matDatepicker]="myDatepicker"
+        [formControl]="date"
+        [disabled]="true">
+  <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatepicker></mat-datepicker>
+  <mat-error>ffffff</mat-error>
+</mat-form-field>
+<mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+
+{{minhaData}}
+<button (click)="myDatepicker.close()">fechar</button> -->
+
+
+<br>
+<!-- <input type="text" [formControl]="date"> -->
+<!-- #myDatepickerModel="ngModel" -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <button (click)="minhaData.open()">Abrir</button> -->
+
+<!-- <mat-form-field>
+  <mat-datepicker-toggle matPrefix [for]="minhaData"></mat-datepicker-toggle>
+  <input matInput type="text" [matDatepicker]="minhaData" [disabled]="true" [min]="dataMinima" [max]="dataMaxima">
+  <mat-datepicker #minhaData [disabled]="false" startView="month" [startAt]="dataInicio" touchUi="true"></mat-datepicker>
+</mat-form-field> -->
+
+
+<!-- <button (click)="minhaData.close()">Fechar</button> -->
+
+
+
+<!-- retirando fotos -->
+<mat-form-field>
+  <mat-datepicker-toggle matPrefix [for]="minhaData"></mat-datepicker-toggle>
+  <input matInput type="text" [matDatepicker]="minhaData" [disabled]="true" [min]="dataMinima" [max]="dataMaxima" [matDatepickerFilter]="filtraDatas">
+  <mat-datepicker #minhaData [disabled]="false" startView="month" [startAt]="dataInicio" touchUi="true"></mat-datepicker>
+</mat-form-field>
+

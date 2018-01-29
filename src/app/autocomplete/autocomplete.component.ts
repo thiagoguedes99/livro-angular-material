@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import {FormControl, NgModel} from '@angular/forms';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
+import { MatSliderChange } from '@angular/material';
 
 export interface State {
   code: string;
@@ -171,11 +172,11 @@ export class AutocompleteComponent implements OnInit {
   // conteudoDigitado: string;
   conteudoDigitado: FormControl = new FormControl();
 
-  ngOnInit() {
-    this.conteudoDigitado.valueChanges.subscribe(val => {
-      this.paisesFiltrados = this.paises.filter(nome => nome.nome.toLowerCase().includes(val));
-    })
-  }
+  // ngOnInit() {
+  //   this.conteudoDigitado.valueChanges.subscribe(val => {
+  //     this.paisesFiltrados = this.paises.filter(nome => nome.nome.toLowerCase().includes(val));
+  //   })
+  // }
 
   // filtrar(valor) {
   //   console.log(valor)
@@ -190,5 +191,22 @@ export class AutocompleteComponent implements OnInit {
   selecionou(event) {
     console.log(event);
   }
+
+  ngOnInit() {
+    this.conteudoDigitado.valueChanges.subscribe(val => {
+      this.paisesFiltrados = this.paises.filter(nome => nome.nome.toLowerCase().includes(val));
+    })
+  }
+
+  // paises: string[] = ['Brasil', 'Argentina', 'Peru', 'Chile', 'Paraguai', 'Uruguai'];
+  // paisesFiltrados: string[];
+  // conteudoDigitado: string;
+
+  filtrar(valor) {
+    console.log(valor)
+    this.paisesFiltrados = this.paises.filter(nome => nome.toLowerCase().includes(valor));
+  }
+
+
 
 }

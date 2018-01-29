@@ -5,6 +5,30 @@
   <mat-datepicker-toggle matSuffix [for]="minDatePicker"></mat-datepicker-toggle>
   <mat-datepicker #minDatePicker [touchUi]="touch" [disabled]="datepickerDisabled"></mat-datepicker>
 </mat-form-field> -->
+<!--
+<input [matDatepicker]="myDatepicker">
+<mat-datepicker #myDatepicker></mat-datepicker> -->
+
+<br>
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="myDatepicker">
+  <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatepicker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- <input matInput [matDatepicker]="myDatepicker">
+<mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+<mat-datepicker #myDatepicker></mat-datepicker> -->
+
+<!-- <mat-form-field>
+  <input matInput #myDatepickerModel="ngModel"
+        [matDatepicker]="myDatepicker"
+        [min]="minhaData">
+  <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatepicker [startAt]="myStart"></mat-datepicker>
+  <mat-error></mat-error>
+</mat-form-field>
+{{minhaData}} -->
 <br>
 <br>
 <br>
@@ -38,13 +62,13 @@
     <mat-datepicker #startAtPicker [touchUi]="touch" [disabled]="datepickerDisabled"></mat-datepicker>
   </mat-form-field>
 </p>
-
+{{ minDate }}
 <h2>Result</h2>
 
 <p>
-  <mat-datepicker-toggle [for]="resultPicker"></mat-datepicker-toggle>
-  <mat-form-field>
-    <input matInput
+  <!-- <mat-datepicker-toggle [for]="resultPicker"></mat-datepicker-toggle> -->
+  <!-- <mat-form-field> -->
+    <!-- <input matInput
            #resultPickerModel="ngModel"
            [matDatepicker]="resultPicker"
            [(ngModel)]="date"
@@ -61,14 +85,14 @@
         [disabled]="datepickerDisabled"
         [startAt]="startAt"
         [startView]="yearView ? 'year' : 'month'">
-    </mat-datepicker>
-    <mat-error *ngIf="resultPickerModel.hasError('matDatepickerParse')">
+    </mat-datepicker> -->
+    <!-- <mat-error *ngIf="resultPickerModel.hasError('matDatepickerParse')">
       "{{resultPickerModel.getError('matDatepickerParse').text}}" is not a valid date!
     </mat-error>
     <mat-error *ngIf="resultPickerModel.hasError('matDatepickerMin')">Too early!</mat-error>
     <mat-error *ngIf="resultPickerModel.hasError('matDatepickerMax')">Too late!</mat-error>
-    <mat-error *ngIf="resultPickerModel.hasError('matDatepickerFilter')">Date unavailable!</mat-error>
-  </mat-form-field>
+    <mat-error *ngIf="resultPickerModel.hasError('matDatepickerFilter')">Date unavailable!</mat-error> -->
+  <!-- </mat-form-field> -->
 </p>
 <p>Last input: {{lastDateInput}}</p>
 <p>Last change: {{lastDateChange}}</p>
