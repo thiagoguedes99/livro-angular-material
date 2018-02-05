@@ -1,0 +1,7 @@
+<svg>
+  <defs>
+    <svg id="check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    <svg id="arrow-drop-down"><path d="M7 10l5 5 5-5z"/></svg>
+    <svg id="arrow-drop-up"><path d="M7 14l5-5 5 5z"/></svg>
+  </defs>
+</svg>

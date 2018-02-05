@@ -1,0 +1,58 @@
+<div class="demo-icon">
+  <p>
+    These are some icons.
+  </p>
+
+  <!-- <img src="app/assets/foto.jpg" alt=""> -->
+  <!-- <img src="../assets/foto.jpg" alt=""> -->
+  <!-- <img src="assets/foto.jpg" alt=""> -->
+  <!-- <mat-icon src="assets/foto.jpg"></mat-icon> -->
+  <!-- <mat-icon>assets/foto.jpg</mat-icon> -->
+  <!-- <mat-icon fontIcon="assets/foto.jpg"></mat-icon> -->
+  <mat-icon fontSet="assets/foto.jpg"></mat-icon>
+  <mat-icon fontSet="assets" fontIcon="foto.jpg"></mat-icon>
+
+
+  <p>
+    By name registered with MatIconProvider:
+    <mat-icon svgIcon="thumb-up" class="green"></mat-icon>
+    <mat-icon svgIcon="thumb-up"></mat-icon>
+  </p>
+
+  <p>
+    From icon set:
+    <mat-icon svgIcon="core:alarm"></mat-icon>
+    <mat-icon svgIcon="core:accessibility"></mat-icon>
+    <mat-icon svgIcon="core:alarm"></mat-icon>
+  </p>
+
+  <p>
+    Ligature from Material Icons font:
+    <mat-icon>home</mat-icon>
+  </p>
+
+  <p>
+    Using a theme:
+    <mat-icon color="primary">home</mat-icon>
+    <mat-icon color="accent">home</mat-icon>
+    <mat-icon color="warn">home</mat-icon>
+  </p>
+
+  <p>
+    Custom icon font and CSS:
+    <mat-icon fontSet="fontawesome" fontIcon="fa-birthday-cake"></mat-icon>
+  </p>
+</div>
+
+<!-- mat-iconfacilita o uso de ícones vetoriais em seu aplicativo.
+Esta diretiva suporta fontes de ícones e ícones SVG, mas não formatos
+baseados em bitmap (png, jpg, etc.). -->
+
+<!-- Para evitar vulnerabilidades XSS, quaisquer URLs SVG passados ​​para o
+MatIconRegistrydevem ser marcados como URL de recursos confiáveis ​​usando o
+DomSanitizerserviço Angular . -->
+
+<!-- Observe também que todos os ícones SVG são obtidos via XmlHttpRequest e
+devido à mesma política de origem, seus URLs devem estar no mesmo domínio
+que a página que contém ou seus servidores devem ser configurados para permitir
+o acesso entre domínios. -->

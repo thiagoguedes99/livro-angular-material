@@ -21,11 +21,20 @@ export class AppComponent {
     return (date.getMonth() == 7 && date.getDate() != 18) && (date.getDay() != 0 && date.getDay() != 6);
   }
 
+  // mudaValor(evento) {
+  //   console.log(this.dataInicio.toString());
+  //   console.log('Chamado a função => mudaValor', evento.getFullYear());
+  // }
+
+  // mudaConteudo(evento) {
+  //   console.log('Chamado a função => mudaConteudo', evento.toLocaleDateString());
+  // }
+
   mudaValor(evento) {
-    console.log(evento);
+    console.log('Chamado a função => mudaValor', evento.getFullYear());
   }
 
   mudaConteudo(evento) {
-    console.log(evento);
+    console.log('Chamado a função => mudaConteudo', evento.getFullYear());
   }
 }

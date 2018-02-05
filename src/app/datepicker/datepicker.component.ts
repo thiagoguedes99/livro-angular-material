@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 import { DateAdapter, NativeDateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { MAT_DATE_LOCALE } from '@angular/material';
 
 export const MY_FORMATS = {
   parse: {
@@ -35,11 +36,14 @@ export const MY_FORMATS = {
 export class DatepickerComponent implements OnInit {
 
   constructor(dateAdapter: DateAdapter<NativeDateAdapter>) {
-    // this.fazData.createDate(2018,0,25);
     dateAdapter.setLocale('pt-BR');
-    // dateAdapter.format(this.fazData, 'dd-mm-yyyy');
-    // dateAdapter.
   }
+  // constructor(dateAdapter: DateAdapter<NativeDateAdapter>) {
+  //   // this.fazData.createDate(2018,0,25);
+  //   // dateAdapter.setLocale('pt-BR');
+  //   // dateAdapter.format(this.fazData, 'dd-mm-yyyy');
+  //   // dateAdapter.
+  // }
 
   ngOnInit() {
   }

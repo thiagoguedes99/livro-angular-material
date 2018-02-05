@@ -22,6 +22,15 @@
 
 <!-- <app-datepicker></app-datepicker> -->
 
+<!-- <app-icon></app-icon> -->
+
+<app-button></app-button>
+
+<!-- <h1>button-toggle</h1> -->
+<!-- <app-button-toggle></app-button-toggle> -->
+
+<!-- <app-progress-spinner></app-progress-spinner> -->
+
 <!-- <button (click)="myDatepicker.open()">abrir</button>
 <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
 <mat-form-field>
@@ -65,9 +74,11 @@
 
 
 <!-- retirando fotos -->
-<mat-form-field>
+<!-- <mat-form-field>
   <mat-datepicker-toggle matPrefix [for]="minhaData"></mat-datepicker-toggle>
-  <input matInput type="text" [matDatepicker]="minhaData" [disabled]="true" [min]="dataMinima" [max]="dataMaxima" [matDatepickerFilter]="filtraDatas">
+  <input matInput type="text" [matDatepicker]="minhaData" [disabled]="false" [min]="dataMinima" [max]="dataMaxima" [matDatepickerFilter]="filtraDatas" (dateInput)="mudaValor($event.value)" (dateChange)="mudaConteudo($event.value)">
   <mat-datepicker #minhaData [disabled]="false" startView="month" [startAt]="dataInicio" touchUi="true"></mat-datepicker>
-</mat-form-field>
+</mat-form-field> -->
+
+<!-- outros componentes -->
 

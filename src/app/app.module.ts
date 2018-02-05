@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,  } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {FormControl} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 // import { MatToolbarModule, MatMenuModule,
 //          MatSidenavModule, MatFormFieldModule,
 //          MatInputModule, MatSelectModule,
@@ -46,7 +47,8 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
-import {MatNativeDateModule, MatRippleModule, MAT_DATE_LOCALE, MAT_DATE_FORMATS} from '@angular/material';
+import {MatNativeDateModule, MatRippleModule, MAT_DATE_FORMATS} from '@angular/material';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {A11yModule} from '@angular/cdk/a11y';
@@ -72,6 +74,10 @@ import { SliderComponent } from './slider/slider.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { IconComponent } from './icon/icon.component';
+import { ButtonComponent } from './button/button.component';
+import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +93,11 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     SliderComponent,
     ToggleComponent,
     AutocompleteComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    IconComponent,
+    ButtonComponent,
+    ButtonToggleComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -100,6 +110,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     // MatInputModule,
     // MatSelectModule,
     FormsModule,
+    HttpClientModule,
     // MatCardModule,
     // MatIconModule,
     // MatCheckboxModule,
@@ -152,10 +163,18 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     PlatformModule,
     PortalModule,
   ],
+  // providers: [
+  //   // {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
+  //   // {provide: MAT_DATE_FORMATS, useValue: 'DD-MM-YYYY'}
+  // ],
+
   providers: [
-    // {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
-    // {provide: MAT_DATE_FORMATS, useValue: 'DD-MM-YYYY'}
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    // dateAdapter.setLocale('pt-BR');
+  }
+}

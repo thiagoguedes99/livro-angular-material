@@ -1,0 +1,59 @@
+/* .demo-button { */
+  /* button, a {
+    margin: 8px;
+    text-transform: uppercase;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+  }
+
+  p {
+    padding: 5px 15px;
+  }
+
+  .section-header {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .no-flex {
+    display: block;
+  } */
+/* } */
+
+.demo-button button, a {
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+.demo-button section {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.demo-button p {
+  padding: 5px 15px;
+}
+
+.demo-button .section-header {
+  font-weight: 500;
+  margin: 0;
+}
+
+.demo-button .no-flex {
+  display: block;
+}
+
+.claro {
+  background-color: C5CAE9;
+  /* background-color:rgba(255,255,255,.5); */
+  /* opacity:0.1; */
+}
+
+.mudar {
+  color: #3f51b5;
+}
